@@ -59,8 +59,7 @@ const ActivityRecommend = ({data}) => {
             style={{
               flexDirection: 'row',
               alignItems: 'center',
-            }}
-          >
+            }}>
             {follow ? (
               <TouchableOpacity
                 onPress={() => setFollow(!follow)}
@@ -97,15 +96,20 @@ const ActivityRecommend = ({data}) => {
                       borderColor: follow ? '#DEDEDE' : null,
                       justifyContent: 'center',
                       alignItems: 'center',
-                    }}
-                  />
+                    }}>
+                    <Text
+                      style={{
+                        color: follow ? 'black' : 'white',
+                      }}>
+                      {follow ? '팔로우' : '팔로잉'}
+                    </Text>
+                  </View>
                 </TouchableOpacity>
                 <TouchableOpacity
                   onPress={() => setClose(true)}
                   style={{
                     paddingHorizontal: 10,
-                  }}
-                >
+                  }}>
                   <AntDesign
                     name="close"
                     style={{
@@ -114,7 +118,6 @@ const ActivityRecommend = ({data}) => {
                       opacity: 0.8,
                     }}
                   />
-
                 </TouchableOpacity>
               </>
             )}
